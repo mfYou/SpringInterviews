@@ -1,8 +1,18 @@
 package Ctrip;
 
-public class Main {
+import java.util.Scanner;
 
+public class Main {
     public static void main(String[] args) {
-	// write your code here
+        Scanner sn = new Scanner(System.in);
+        long num = sn.nextLong();
+        int count = 0;
+        while (num > 0){
+            if ((num&1)==1){
+                count+=1;
+            }
+            num = num>>1;
+        }
+        System.out.println(count);
     }
 }
